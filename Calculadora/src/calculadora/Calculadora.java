@@ -563,7 +563,7 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCActionPerformed
 
     private void botonCEActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonCEActionPerformed
-        int tamaño = cadenaNumeros.length(); 
+        int tamaño = cadenaNumeros.length();
         if(tamaño > 0){
             if(tamaño == 1){
                 cadenaNumeros = "0";
@@ -587,7 +587,15 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonInversaActionPerformed
 
     private void botonSumar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonSumar1ActionPerformed
-        // TODO add your handling code here:
+        if (cadenaNumeros == null || "".equals(cadenaNumeros)){
+            return;
+        }
+        if(activado == true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            resultado = primerNumero * primerNumero;
+            etiquetaNumeros.setText(String.format("% .2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+        }
     }//GEN-LAST:event_botonSumar1ActionPerformed
 
     private void botonIgual1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgual1ActionPerformed
