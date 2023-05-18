@@ -598,7 +598,13 @@ public class Calculadora extends javax.swing.JFrame {
     }//GEN-LAST:event_botonPotenciaActionPerformed
 
     private void botonPorcentajeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonPorcentajeActionPerformed
-        // TODO add your handling code here:
+        //Aqui colocaremos el codigo necesario para ejecutar la operación porcentaje
+        if(activado == true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            resultado = primerNumero/100;
+            etiquetaNumeros.setText(String.format("% .2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+        }
     }//GEN-LAST:event_botonPorcentajeActionPerformed
 
     private void botonInversaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonInversaActionPerformed
