@@ -60,7 +60,7 @@ public class Calculadora extends javax.swing.JFrame {
         jButton42 = new javax.swing.JButton();
         botonPunto = new javax.swing.JButton();
         botonIgual = new javax.swing.JButton();
-        botonIgual1 = new javax.swing.JButton();
+        botonAlCubo = new javax.swing.JButton();
         etiquetaNumeros = new javax.swing.JLabel();
         etiquetaMuestra = new javax.swing.JLabel();
 
@@ -293,14 +293,14 @@ public class Calculadora extends javax.swing.JFrame {
         });
         panel.add(botonIgual);
 
-        botonIgual1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
-        botonIgual1.setText("X^3");
-        botonIgual1.addActionListener(new java.awt.event.ActionListener() {
+        botonAlCubo.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonAlCubo.setText("X^3");
+        botonAlCubo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                botonIgual1ActionPerformed(evt);
+                botonAlCuboActionPerformed(evt);
             }
         });
-        panel.add(botonIgual1);
+        panel.add(botonAlCubo);
 
         etiquetaNumeros.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         etiquetaNumeros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -598,9 +598,15 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_botonSumar1ActionPerformed
 
-    private void botonIgual1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonIgual1ActionPerformed
+    private void botonAlCuboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlCuboActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_botonIgual1ActionPerformed
+        if(activado == true){
+            primerNumero = Double.parseDouble(cadenaNumeros);
+            resultado = Math.pow(primerNumero, 3);
+            etiquetaNumeros.setText(String.format("% .2f", resultado));
+            cadenaNumeros = String.valueOf(resultado);
+        }
+    }//GEN-LAST:event_botonAlCuboActionPerformed
 
     /**
      * @param args the command line arguments
@@ -641,11 +647,11 @@ public class Calculadora extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonAlCubo;
     private javax.swing.JButton botonC;
     private javax.swing.JButton botonCE;
     private javax.swing.JButton botonDivision;
     private javax.swing.JButton botonIgual;
-    private javax.swing.JButton botonIgual1;
     private javax.swing.JButton botonInversa;
     private javax.swing.JButton botonMultiplicar;
     private javax.swing.JButton botonPorcentaje;

@@ -346,7 +346,7 @@
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonIgualActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="botonIgual1">
+        <Component class="javax.swing.JButton" name="botonAlCubo">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Tahoma" size="18" style="0"/>
@@ -354,7 +354,7 @@
             <Property name="text" type="java.lang.String" value="X^3"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonIgual1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="botonAlCuboActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

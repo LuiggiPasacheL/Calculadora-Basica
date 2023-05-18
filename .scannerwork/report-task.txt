@@ -1,0 +1,6 @@
+projectKey=LuiggiPasacheL_Calculadora-Basica
+serverUrl=http://localhost:9000
+serverVersion=10.0.0.68432
+dashboardUrl=http://localhost:9000/dashboard?id=LuiggiPasacheL_Calculadora-Basica
+ceTaskId=AYgtK35G1tXdcu7mR1J3
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AYgtK35G1tXdcu7mR1J3
