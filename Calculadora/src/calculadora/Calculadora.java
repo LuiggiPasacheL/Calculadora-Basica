@@ -62,6 +62,7 @@ public class Calculadora extends javax.swing.JFrame {
         BotonRaizCuadrada = new javax.swing.JButton();
         botonAlCubo = new javax.swing.JButton();
         botonIgual = new javax.swing.JButton();
+        botonAlCubo1 = new javax.swing.JButton();
         etiquetaNumeros = new javax.swing.JLabel();
         etiquetaMuestra = new javax.swing.JLabel();
 
@@ -320,6 +321,16 @@ public class Calculadora extends javax.swing.JFrame {
             }
         });
         panel.add(botonIgual);
+
+        botonAlCubo1.setBackground(new java.awt.Color(204, 255, 255));
+        botonAlCubo1.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        botonAlCubo1.setText("1/X");
+        botonAlCubo1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                botonAlCubo1ActionPerformed(evt);
+            }
+        });
+        panel.add(botonAlCubo1);
 
         etiquetaNumeros.setFont(new java.awt.Font("Tahoma", 0, 36)); // NOI18N
         etiquetaNumeros.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -644,6 +655,14 @@ public class Calculadora extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_BotonRaizCuadradaActionPerformed
 
+    private void botonAlCubo1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_botonAlCubo1ActionPerformed
+        primerNumero = Double.parseDouble(cadenaNumeros);
+        etiquetaMuestra.setText("1/"+cadenaNumeros);
+        resultado = 1/primerNumero;
+        etiquetaNumeros.setText(String.format("%.2f", resultado));
+        cadenaNumeros = String.valueOf(resultado); //convertimos el valor a cadena
+    }//GEN-LAST:event_botonAlCubo1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -685,6 +704,7 @@ public class Calculadora extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton BotonRaizCuadrada;
     private javax.swing.JButton botonAlCubo;
+    private javax.swing.JButton botonAlCubo1;
     private javax.swing.JButton botonC;
     private javax.swing.JButton botonCE;
     private javax.swing.JButton botonDivision;
